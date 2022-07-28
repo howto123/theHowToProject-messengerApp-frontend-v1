@@ -1,0 +1,166 @@
+ 
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <title>messenger app</title>
+   <meta name="description" content="A simple messenger webapp.">
+   <meta name="author" content="theHowToProject">
+
+   <link rel="icon" href="">
+
+   <!-- Latest compiled and minified CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Latest compiled JavaScript -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+   <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+   <script type="text/JavaScript" src="./ServerApi.js"></script>
+   <script type="text/JavaScript" src="./User.js"></script>
+   <script type="text/JavaScript" src="./TempMaps.js"></script>
+   <script type="text/JavaScript" src="./App.js"></script>
+   <script type="text/JavaScript" src="./Utils.js"></script>
+   <script type="text/JavaScript" src="./Test.js"></script>
+ 
+</head>
+<body>
+
+   <div id="loginView" class="container p-5 my-5 border" style="max-width: 800px;">
+      <h2>Please create an account or log in.</h2>
+      <br>
+      <h4>Create account</h4>
+      <div class="row mb-2">
+         <div class="col-sm-4 mb-1">
+            <input type="text" id="usernameCreate" style="width:100%; text-align: start;" placeholder="(username)">
+         </div>
+         <div class="col-sm-4 mb-1">
+            <input type="text" id="passwordCreate" style="width:100%; text-align: start;" placeholder="(password)">
+         </div>
+         <div class="col-sm-2 mb-1">
+            <input type="button" id="createUserButton" style="width:100%" value="Create">
+         </div>
+      </div>
+      <br><br>
+      <h4>Log in</h4>
+      <div class="row mb-2">
+         <div class="col-sm-4 mb-1">
+            <input type="text" id="usernameLogin" style="width:100%; text-align: start;" placeholder="(username)">
+         </div>
+         <div class="col-sm-4 mb-1">
+            <input type="text" id="passwordLogin" style="width:100%; text-align: start;" placeholder="(password)">
+         </div>
+         <div class="col-sm-2 mb-1">
+            <input type="button" id="loginButton" style="width:100%" value="Log in">
+         </div>
+      </div>
+      
+      
+      
+   </div> <!--loginView ends-->
+
+   <div id="standardView" class="container p-5 my-5 border" style="max-width: 800px;">
+      <h2>Have fun with this simple messenger app!</h2>
+      <br>
+      <h4>Send messages</h4>
+      <div class="row mb-1">
+         <div class="col-sm-6 mb-1">
+            <input type="button" id="sendButton" style="width:100%" value="Send">
+         </div>
+         <div class="col-sm-6 mb-1">
+            <input type="text" id="receiver" style="width:100%; text-align: center;" placeholder="(receiver)"><br>
+         </div>
+      </div>
+      <div class="row">
+         <div class="col-sm-12 mb-1">
+            <input type="text" id="content" style="width:100%; text-align: center;" placeholder="(your message)">
+         </div>
+      </div>
+
+      <br><br>
+
+      <h4>See eighter all chats or choose a conversation</h4>
+      <div class="row mb-2">
+         <div class="col-sm-12 mb-1">
+            <input type="button" id="showAllChatsButton" style="width:100%" value="Show all chats">
+         </div>
+      </div>
+      <hr>
+      <div class="row">
+         <div class="col-sm-6 mb-1">
+            <input type="button" id="showSpecificChatButton" style="width:100%" value="Show this chat:">
+         </div>
+         <div class="col-sm-6 mb-1">
+            <input type="text" id="partner" style="width:100%; text-align: center;" placeholder="(enter chat partner)">
+         </div>
+      </div>
+
+      <br><br>
+
+      <div id="allConversationsTableDiv" class="row mb-2">
+         <div class="col-sm-12 mb-1">
+            <table id="allConversationsTable"class="table table-stripped">
+               <thead>
+               <tr>
+                  <th>Name</th>
+                  <th>Last Message</th>
+               </tr>
+               </thead>
+               <tbody>
+               <tr>
+                  <td></td>
+                  <td></td>
+               </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>         
+               
+      <div id="specificConversationTableDiv" class="row mb-2">
+         <div class="col-sm-12 mb-1">
+            <table id="specificConversationTable" class="table table-stripped">
+               <thead>
+               <tr>
+                  <th>Sender</th>
+                  <th>Message</th>
+               </tr>
+               </thead>
+               <tbody>
+               <tr>
+                  <td></td>
+                  <td></td>
+               </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+      
+      <br><hr>
+
+      <div class="row mb-2">
+         <div class="col-sm-12 mb-1">
+            <input type="button" id="showHideUniverseButton" style="width:100%" value="Show / hide all contacts and user identities">
+         </div>
+         <div id="nameAndIdTableDiv" class="col-sm-12 mb-1">
+            <table id="nameAndIdTable" class="table table-stripped">
+               <thead>
+               <tr>
+                  <th>User name</th>
+                  <th>Identity</th>
+               </tr>
+               </thead>
+               <tbody>
+               <tr>
+                  <td>user1</td>
+                  <td>532</td>
+               </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+
+   </div> <!--standardView ends-->
+
+</body>
+</html>
